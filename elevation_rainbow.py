@@ -50,8 +50,8 @@ def make_gif_from_images(gif_title, img_list=None, img_search_key=None, remove_i
 
 
 # Read in contour and country shapefile (e.g. generated in QGIS)
-contours = gpd.read_file('./italy/italy_contours_100.shp').to_crs(CRS)
-country = gpd.read_file('./italy/italy.shp').to_crs(CRS)
+contours = gpd.read_file('./italy_contours_100.shp').to_crs(CRS) # needs unzipping
+country = gpd.read_file('./italy.shp').to_crs(CRS)
 bbox = contours.total_bounds 
 
 # Capping contours to a maximum value
